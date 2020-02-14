@@ -79,6 +79,9 @@ range(NewDATA$CarbonDensity.gcm3, na.rm = T )#0.0009671682 0.0956876371
 
 
 #Plot Carbon by elevation========
+CoreCarbon <- NewDATA %>% filter(Elevation != "Lowest") %>% #This one was weird plot 
+  
+  group_by()
 aa <- ggplot(NewDATA[NewDATA$Elevation2 != "Lowest",],
              aes(x = Year, y = CarbonStock.Mgha, color = t)) +
   geom_point( size = 2)+
